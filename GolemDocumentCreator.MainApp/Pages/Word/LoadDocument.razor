@@ -1,0 +1,40 @@
+﻿@page "/loaddoc"
+
+
+<InputFile 
+    OnChange="@LoadFile"
+    multiple/>
+
+@if (errors.Count > 0)
+{
+    <div class="alert-danger">
+        <h2>При загрузке файлов возникли следующие ошибки:</h2>
+        <ul class="text-danger">
+            @foreach(var er in errors)
+            {
+                <li>@er</li>
+            }
+        </ul>
+    </div>
+}
+
+@code {
+    private long maxFileSize = 1024*1024*3;
+    private int maxAllowedFiles = 10;
+    private List<string> errors = new();
+
+    private async Task LoadFile(InputFileChangeEventArgs e)
+    {
+        errors.Clear();
+        if (e.FileCount > maxAllowedFiles)
+        {
+            errors.Add($"Ошибка: Загрузка более чем {maxAllowedFiles} может негативно сказаться на скорости и качестве работы! \n Вы загрузили {e.FileCount} файла(ов)!");
+            return;
+        }
+
+        foreach (var file in e.GetMultipleFiles(maxAllowedFiles))
+        {
+            string newFile = Path.ChangeExtension(Path.GetRandomFileName(), Path.GetExtension(file.Name));
+        }
+    }
+}

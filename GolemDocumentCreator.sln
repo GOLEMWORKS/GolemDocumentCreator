@@ -4,11 +4,13 @@ VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GolemDocumentCreator.MainApp", "GolemDocumentCreator.MainApp\GolemDocumentCreator.MainApp.csproj", "{9C4BAD56-EF7D-402C-8F29-BFA533A56777}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GolemDocumentCreator.Plugins", "GolemDocumentCreator.Plugins\GolemDocumentCreator.Plugins.csproj", "{E3FCF1F6-6D39-4535-95A8-CD9B8DD19C37}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GolemDocumentCreator.Plugins", "GolemDocumentCreator.Plugins\GolemDocumentCreator.Plugins.csproj", "{E3FCF1F6-6D39-4535-95A8-CD9B8DD19C37}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GolemDocumentCreator.CoreBusiness", "GolemDocumentCreator.CoreBusiness\GolemDocumentCreator.CoreBusiness.csproj", "{0D237392-3E87-470D-AEA1-A9BA9F2D4AAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GolemDocumentCreator.CoreBusiness", "GolemDocumentCreator.CoreBusiness\GolemDocumentCreator.CoreBusiness.csproj", "{0D237392-3E87-470D-AEA1-A9BA9F2D4AAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GolemDocumentCreator.UseCases", "GolemDocumentCreator.UseCases\GolemDocumentCreator.UseCases.csproj", "{81BFB1B7-E804-4C18-9416-4C775C7A18D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GolemDocumentCreator.UseCases", "GolemDocumentCreator.UseCases\GolemDocumentCreator.UseCases.csproj", "{81BFB1B7-E804-4C18-9416-4C775C7A18D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GolemDocumentCreator.International", "GolemDocumentCreator.International\GolemDocumentCreator.International.csproj", "{EF4C766D-5DC0-4E9B-8F6E-C54C0EEB4505}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,6 +36,10 @@ Global
 		{81BFB1B7-E804-4C18-9416-4C775C7A18D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81BFB1B7-E804-4C18-9416-4C775C7A18D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81BFB1B7-E804-4C18-9416-4C775C7A18D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF4C766D-5DC0-4E9B-8F6E-C54C0EEB4505}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF4C766D-5DC0-4E9B-8F6E-C54C0EEB4505}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF4C766D-5DC0-4E9B-8F6E-C54C0EEB4505}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF4C766D-5DC0-4E9B-8F6E-C54C0EEB4505}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
