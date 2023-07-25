@@ -22,6 +22,7 @@
     private long maxFileSize = 1024*1024*3;
     private int maxAllowedFiles = 10;
     private List<string> errors = new();
+    private string userPath = "..\\";
 
     private async Task LoadFile(InputFileChangeEventArgs e)
     {
@@ -34,7 +35,16 @@
 
         foreach (var file in e.GetMultipleFiles(maxAllowedFiles))
         {
-            string newFile = Path.ChangeExtension(Path.GetRandomFileName(), Path.GetExtension(file.Name));
+            string newFileName = Path.ChangeExtension(
+                Path.GetRandomFileName(), 
+                Path.GetExtension(file.Name));
+
+            string path = Path.Combine(
+                userPath!, 
+                "userfiles", 
+                newFileName);
+
+            
         }
     }
 }
