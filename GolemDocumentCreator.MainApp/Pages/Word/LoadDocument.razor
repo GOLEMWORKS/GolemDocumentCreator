@@ -2,8 +2,26 @@
 
 
 <InputFile 
-    OnChange="@LoadFile"
+    OnChange="@OnInputFileChange"
     multiple/>
+
+@if (fileNames.Count > 0)
+{
+    <ul>
+        @foreach (var fileName in fileNames)
+        {
+            <li class="text-primary">
+                Файл @fileName загружен успешно
+             </li>
+        }
+    </ul>
+
+    <button
+        onclick="@ClearFileList">
+        Очистить список загрузок!
+    </button>
+}
+
 
 @if (errors.Count > 0)
 {
@@ -19,10 +37,31 @@
 }
 
 @code {
-    private long maxFileSize = 1024*1024*3;
+    private long maxFileSize = 1024*1024*30;
     private int maxAllowedFiles = 10;
+    private List<string> fileNames = new();
     private List<string> errors = new();
-    private string userPath = "..\\";
+
+    private async Task ClearFileList() => fileNames.Clear();
+
+    private async Task OnInputFileChange(InputFileChangeEventArgs e)
+    {
+        using var content = new MultipartFormDataContent();
+
+        foreach (var file in e.GetMultipleFiles(maxAllowedFiles))
+        {
+            var fileContent = new StreamContent(file.OpenReadStream(maxFileSize));
+            fileContent.Headers.ContentType = new MediaTypeHeaderValue(file.ContentType);
+
+            fileNames.Add(file.Name);
+
+            content.Add(
+                content: fileContent,
+                name: "\"userfiles\"",
+                fileName: file.Name
+            );
+        }
+    }
 
     private async Task LoadFile(InputFileChangeEventArgs e)
     {
@@ -37,14 +76,7 @@
         {
             string newFileName = Path.ChangeExtension(
                 Path.GetRandomFileName(), 
-                Path.GetExtension(file.Name));
-
-            string path = Path.Combine(
-                userPath!, 
-                "userfiles", 
-                newFileName);
-
-            
+                Path.GetExtension(file.Name));            
         }
     }
 }
