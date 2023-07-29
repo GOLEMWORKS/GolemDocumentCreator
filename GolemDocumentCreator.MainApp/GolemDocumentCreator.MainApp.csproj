@@ -59,4 +59,11 @@
       <Folder Include="Controllers\" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\GolemDocumentCreator.CoreBusiness\GolemDocumentCreator.CoreBusiness.csproj" />
+      <ProjectReference Include="..\GolemDocumentCreator.International\GolemDocumentCreator.International.csproj" />
+      <ProjectReference Include="..\GolemDocumentCreator.Plugins\GolemDocumentCreator.Plugins.csproj" />
+      <ProjectReference Include="..\GolemDocumentCreator.UseCases\GolemDocumentCreator.UseCases.csproj" />
+    </ItemGroup>
+
 </Project>
