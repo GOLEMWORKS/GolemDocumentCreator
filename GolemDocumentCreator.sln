@@ -16,7 +16,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GolemDocumentCreator.CoreBu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GolemDocumentCreator.UseCases", "GolemDocumentCreator.UseCases\GolemDocumentCreator.UseCases.csproj", "{81BFB1B7-E804-4C18-9416-4C775C7A18D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GolemDocumentCreator.International", "GolemDocumentCreator.International\GolemDocumentCreator.International.csproj", "{EF4C766D-5DC0-4E9B-8F6E-C54C0EEB4505}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GolemDocumentCreator.International", "GolemDocumentCreator.International\GolemDocumentCreator.International.csproj", "{EF4C766D-5DC0-4E9B-8F6E-C54C0EEB4505}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,7 +51,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {30F23934-FE54-4D04-8380-08B380D24C76}
 		        SolutionGuid = {61F7FB11-1E47-470C-91E2-47F8143E1572}
+		SolutionGuid = {30F23934-FE54-4D04-8380-08B380D24C76}
 	EndGlobalSection
 EndGlobal

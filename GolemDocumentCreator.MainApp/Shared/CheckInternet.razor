@@ -1,0 +1,16 @@
+﻿<button 
+    class="btn btn-primary"
+    @onclick="CheckInternetConnection">
+    Проверка соединения
+</button>
+
+@code {
+    private async void CheckInternetConnection()
+    {
+        var isConnected = Connectivity.Current.NetworkAccess == NetworkAccess.Internet;
+
+        var connectionType = Connectivity.Current.ConnectionProfiles.FirstOrDefault();
+
+        await Application.Current.MainPage.DisplayAlert("Подключение", $"Статус: {isConnected} \n Тип соединения: {connectionType}", "Принять");
+    }
+}
