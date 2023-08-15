@@ -8,38 +8,6 @@
 
 <SurveyPrompt Title="How is Blazor working for you?" />
 
-@* <strong>Culture:</strong>
-<select class="form-control"
-        @bind="Culture"
-        style="width:50px;">
-    @foreach(var culture in cultures){
-        <option value="@culture">
-            @culture.DisplayName
-        </option>
-    }    
-</select> *@
-
 @code {
     string ver = "alpha 0.1";
-
-    // CultureInfo[] cultures = new[]
-    // {
-    //     new CultureInfo("ru-RU"),
-    //     new CultureInfo("en-US")
-    // };
-
-    // CultureInfo Culture { 
-    //     get => CultureInfo.CurrentCulture;
-    //     set
-    //     {
-    //         if (CultureInfo.CurrentCulture != value)
-    //         {
-    //             Thread.CurrentThread.CurrentCulture = value;
-    //             Thread.CurrentThread.CurrentUICulture = value;
-    //             CultureInfo.DefaultThreadCurrentCulture = value;
-    //             CultureInfo.DefaultThreadCurrentUICulture = value;
-    //             Preferences.Set("language", value.Name);
-    //         }
-    //     }
-    // }
 }

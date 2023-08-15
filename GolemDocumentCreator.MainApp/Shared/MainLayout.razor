@@ -1,5 +1,6 @@
 ﻿@inherits LayoutComponentBase
 @inject IStringLocalizer<MyStrings> Localizer
+@inject NavigationManager NavigationManager
 
 <div class="page">
     <div class="sidebar">
@@ -9,16 +10,19 @@
     <main>
         <div class="top-row px-4">
             <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
-            <select class="form-control" 
+
+            <select class="form-control"
             @bind="Culture"
-            style="width:50px;">
+                    style="width:50px;">
                 @foreach (var culture in cultures)
                 {
-                    <option value="@culture">
+                    <option 
+                        value="@culture">
                         @culture.DisplayName
                     </option>
                 }
             </select>
+
         </div>
 
         <article class="content px-4">
@@ -28,6 +32,12 @@
 </div>
 
 @code {
+
+    public void RefreshContent()
+    {
+        NavigationManager.NavigateTo(NavigationManager.Uri, true);
+    }
+
     CultureInfo[] cultures = new[]
     {
         new CultureInfo("ru-RU"),
