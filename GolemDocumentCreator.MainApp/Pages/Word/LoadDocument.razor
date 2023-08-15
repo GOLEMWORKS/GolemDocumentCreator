@@ -1,5 +1,7 @@
 ﻿@page "/loaddoc"
 
+@inject IStringLocalizer<MyStrings> Localizer
+<h1>@Localizer["HelloWorld"]</h1>
 
 <InputFile 
     OnChange="@LoadFile"

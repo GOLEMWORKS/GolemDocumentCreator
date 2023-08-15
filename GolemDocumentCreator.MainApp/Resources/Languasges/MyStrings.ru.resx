@@ -121,4 +121,8 @@
     <value>Привет, мир!</value>
     <comment>Привет, мир!</comment>
   </data>
+  <data name="WelcomeToApp" xml:space="preserve">
+    <value>Добро пожаловать в Golemworks Management System версии {0}</value>
+    <comment>Добро пожаловать в GMS ver---</comment>
+  </data>
 </root>

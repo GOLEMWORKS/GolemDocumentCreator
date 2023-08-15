@@ -22,7 +22,7 @@ namespace GolemDocumentCreator.MainApp.Resources.Languasges {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class MyStrings {
+    public class MyStrings {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace GolemDocumentCreator.MainApp.Resources.Languasges {
         ///   Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("GolemDocumentCreator.MainApp.Resources.Languasges.MyStrings", typeof(MyStrings).Assembly);
@@ -51,7 +51,7 @@ namespace GolemDocumentCreator.MainApp.Resources.Languasges {
         ///   обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,9 +63,18 @@ namespace GolemDocumentCreator.MainApp.Resources.Languasges {
         /// <summary>
         ///   Ищет локализованную строку, похожую на Hello, world!.
         /// </summary>
-        internal static string HelloWorld {
+        public static string HelloWorld {
             get {
                 return ResourceManager.GetString("HelloWorld", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Welcome to Golemworks Management System version {0}.
+        /// </summary>
+        public static string WelcomeToApp {
+            get {
+                return ResourceManager.GetString("WelcomeToApp", resourceCulture);
             }
         }
     }
