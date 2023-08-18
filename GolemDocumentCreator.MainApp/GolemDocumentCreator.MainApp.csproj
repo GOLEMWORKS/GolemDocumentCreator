@@ -55,4 +55,22 @@
         <PackageReference Include="NPOI" Version="2.6.1" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Update="Resources\Languasges\MyStrings.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>MyStrings.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Update="Resources\Languasges\MyStrings.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>MyStrings.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Languasges\MyStrings.ru.resx">
+        <Generator></Generator>
+      </EmbeddedResource>
+    </ItemGroup>
+
 </Project>
