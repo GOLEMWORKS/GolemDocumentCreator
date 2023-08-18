@@ -1,13 +1,11 @@
-﻿using System.Globalization;
-
-namespace GolemDocumentCreator.MainApp;
+﻿namespace GolemDocumentCreator.MainApp;
 
 public partial class App : Application
 {
-	public App()
-	{
-		InitializeComponent();
+    public App()
+    {
+        InitializeComponent();
 
         MainPage = new MainPage();
-	}
+    }
 }
